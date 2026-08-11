@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #F4F6FA;
+}
+
+/* ============ HERO ============ */
+
+.vision-hero {
+    position: relative;
+    height: 380px;
+    background-image: url("../images/smart-cities.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    margin-left: 10px;
+}
+
+.logo-text h1 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.logo-text p {
+    color: #eee;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.navbar {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1B1B1B;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: white;
+}
+
+.vision-hero-text {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.vision-hero-text h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.vision-hero-text p {
+    color: white;
+    font-size: 15px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* ============ CARDS ============ */
+
+.vision-cards-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.vision-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+}
+
+.vision-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.vision-card-body {
+    padding: 18px;
+}
+
+.vision-card-body h3 {
+    font-size: 15px;
+    color: #0B1F3A;
+    margin-bottom: 8px;
+}
+
+.vision-card-body p {
+    font-size: 12.5px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ============ BANNER ============ */
+
+.vision-banner {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.vision-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vision-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(11,31,58,0.92) 40%, rgba(11,31,58,0.15));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.vision-banner-overlay p {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 380px;
+    margin-bottom: 14px;
+}
+
+.vision-banner-overlay h2 {
+    color: #F4A522;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-banner-overlay {
+        padding-left: 30px;
+        background: rgba(11,31,58,0.8);
+    }
+
+}
