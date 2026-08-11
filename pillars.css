@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #F4F6FA;
+}
+
+/* ============ TOP BAR ============ */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: auto;
+}
+
+.logo-text {
+    margin-left: 10px;
+}
+
+.logo-text h1 {
+    color: #0B1F3A;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo-text p {
+    color: #666;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.navbar {
+    display: flex;
+    gap: 6px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1B1B1B;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: #F0F0F0;
+}
+
+.journey-btn {
+    background: #173D7A;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.journey-btn:hover {
+    background: #0F2F60;
+    transform: scale(1.05);
+}
+
+/* ============ HEADING ============ */
+
+.pillars-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 30px 80px 30px;
+}
+
+.pillars-heading h2 {
+    font-size: 32px;
+    color: #0B1F3A;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.pillars-heading p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+/* ============ PILLAR CARDS ============ */
+
+.pillars-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pillar-card {
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 130px;
+    color: white;
+}
+
+.pillar-badge {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(0,0,0,0.15);
+}
+
+.pillar-badge .num {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pillar-badge .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.pillar-text {
+    flex: 1;
+    padding: 0 24px;
+}
+
+.pillar-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.pillar-text p {
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.92;
+    max-width: 380px;
+}
+
+.pillar-arrow {
+    font-size: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.pillar-image {
+    width: 260px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.pillar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============ COLORS ============ */
+
+.economy {
+    background: linear-gradient(135deg, #14532D, #1E7A3D);
+}
+
+.infrastructure {
+    background: linear-gradient(135deg, #B5620A, #D97F1F);
+}
+
+.technology {
+    background: linear-gradient(135deg, #0F2F5C, #1B4C8C);
+}
+
+.demography {
+    background: linear-gradient(135deg, #5B2E91, #7C3FB8);
+}
+
+.demand {
+    background: linear-gradient(135deg, #9A2A1F, #C13B2C);
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .pillar-card {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .pillar-badge {
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        padding: 12px 20px;
+        height: auto;
+    }
+
+    .pillar-text {
+        padding: 16px 20px;
+    }
+
+    .pillar-arrow {
+        display: none;
+    }
+
+    .pillar-image {
+        width: 100%;
+        height: 160px;
+    }
+
+}
